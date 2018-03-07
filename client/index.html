@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodiGo</title>
+    <link href="mainStyle.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <div id="title">
+    <img id="logo" src="https://avatars3.githubusercontent.com/u/36678554?s=200&v=4"> </img>
+    <input id="search" type="search" placeholder="what would you like to eat?"></input><button>Search</button>
+  </div>
+  <body>
+
+    <div id="flex-box">
+      <div id="TitleMap"></div>
+      <div id="Pictures"></div>
+    </div>
+    <div id="flex-box2">
+      <div id="ReviewApp"></div>
+      <div id="SideBar"></div>
+    </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="http://localhost:3000/bundle.js"></script>
+    <script src="http://localhost:8001/bundle.js"></script>
+    <script src="http://localhost:3001/bundle.js"></script>
+    <script src="http://localhost:3400/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8001/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3400/style.css">
+    <script>
+    let id = 160;
+      ReactDOM.render(
+        React.createElement(Pictures, {id: id}, null),
+        document.getElementById('Pictures')
+      );
+    </script>
+    <script>
+      ReactDOM.render(
+        React.createElement(ReviewApp, {restaurantId: id}, null),
+        document.getElementById('ReviewApp')
+      );
+      </script>
+      <script>
+       ReactDOM.render(
+         React.createElement(TitleMap, {id: id}, null),
+         document.getElementById('TitleMap')
+       );
+    </script>
+    <script>
+     ReactDOM.render(
+       React.createElement(Sidebar, { id: id, location: window.navigator.geolocation }, null),
+       document.getElementById('SideBar')
+     );
+  </script>
+  </body>
+</html>

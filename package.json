@@ -1,0 +1,35 @@
+{
+  "name": "pictures-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server for FoodiGo",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoodiGo/pictures-proxy.git"
+  },
+  "author": "Matt Mullen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FoodiGo/pictures-proxy/issues"
+  },
+  "homepage": "https://github.com/FoodiGo/pictures-proxy#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.2",
+    "nodemon": "^1.17.1",
+    "supertest": "^3.0.0",
+    "eslint-plugin-jest": "^21.12.2"
+  }
+}
