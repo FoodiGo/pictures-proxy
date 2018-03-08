@@ -7,11 +7,13 @@ app.use(express.static('client'));
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
-app.listen(8081);
+const port = process.env.PORT || 3050;
+
+app.listen(port);
 
 
 app.get('/pictures/:id', (req, res) => {
-  request.get(`http://foodigopictures.us-west-1.elasticbeanstalk.com/{req.path}`).pipe(res);
+  request.get(`http://foodigopictures.us-west-1.elasticbeanstalk.com/${req.path}`).pipe(res);
 });
 
 app.get('/information/:id', (req, res) => {
