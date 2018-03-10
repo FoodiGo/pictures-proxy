@@ -15,7 +15,7 @@
 #TitleMap {
   float: left;
   flex-grow: 50%;
-  width: 50%;
+  width: 17%;
 }
 #SideBar {
   width: 30%;
@@ -24,7 +24,7 @@
 }
 #Pictures {
   float: right;
-  margin-left: -475px;
+  /* margin-left: -375px; */
   align-self: flex-end;
   padding-bottom: 50px;
 }

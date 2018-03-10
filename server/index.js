@@ -13,23 +13,23 @@ app.listen(port);
 
 
 app.get('/pictures/:id', (req, res) => {
-  request.get(`http://foodigopictures.us-west-1.elasticbeanstalk.com/${req.path}`).pipe(res);
+  request.get(`http://foodigopictures.us-west-1.elasticbeanstalk.com${req.path}`).pipe(res);
 });
 
 app.get('/information/:id', (req, res) => {
-  request.get(`http://localhost:3400${req.path}`).pipe(res);
+  request.get(`http://foodigosidebar-env.us-east-2.elasticbeanstalk.com${req.path}`).pipe(res);
 });
 
 app.get('/restaurants/:restaurantId/reviews', (req, res) => {
-  request.get(`http://foodigoreviews.us-west-1.elasticbeanstalk.com/${req.path}`).pipe(res);
+  request.get(`http://foodigoreviews.us-west-1.elasticbeanstalk.com${req.path}`).pipe(res);
 });
 
 app.get('/title/:id', (req, res) => {
-  request.get(`http://localhost:3001${req.path}`).pipe(res);
+  request.get(`http://foodigotitle-env.us-west-1.elasticbeanstalk.com${req.path}`).pipe(res);
 });
 
 app.get('/map/:id', (req, res) => {
-  request.get(`http://localhost:3001${req.path}`).pipe(res);
+  request.get(`http://foodigotitle-env.us-west-1.elasticbeanstalk.com${req.path}`).pipe(res);
 });
 
 module.exports = app;
